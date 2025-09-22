@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealplan</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; text-decoration: none; margin-right: 10px; }
+        .content { padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'random' %}">Ich hab Hunger</a>
+        <a href="{% url 'about' %}">Über uns</a>
+    </nav>
+    
+    <div class="body">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>
